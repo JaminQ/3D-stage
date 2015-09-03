@@ -1,0 +1,170 @@
+body
+{
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+}
+#stage
+{
+    font-family: 'Microsoft Yahei';
+}
+#stage > dd
+{
+    color: white;
+    border: 1px solid rgba(127, 255, 255, .25);
+    border-radius: 3px;
+    /*background-color: rgba(0, 127, 127, .615686);*/
+    /*background-color: rgba(73, 160, 154, .329412);*/
+    /*background-color: rgba(0, 127, 127, .258824);*/
+    /*background-color: rgba(73, 160, 154, .145098);*/
+    background-color: rgba(73, 160, 154, .5);
+    /*box-shadow: 0px 0px 12px rgba(0, 255, 255, .5);*/
+    box-shadow: 0 0 12px rgba(231, 254, 237, .6);
+    text-shadow: 0 0 10px rgba(0, 255, 255, .95);
+
+    -webkit-box-reflect: below 48px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, .4)));
+}
+#stage > dd:hover
+{
+    border: 1px solid rgba(127, 255, 255, .9);
+    background-color: rgba(73, 160, 154, .9);
+    box-shadow: 0 0 12px rgba(0, 255, 255, .9);
+}
+#stage > dd > .title
+{
+    font-size: 35px;
+
+    margin: 10px 0 5px 0;
+
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+#stage > dd > .author
+{
+    font-size: 14px;
+
+    margin-right: 10px;
+
+    text-align: right;
+}
+#stage > dd > .date
+{
+    font-size: 12px;
+
+    margin-right: 10px;
+
+    text-align: right;
+}
+#stage > dd > .url
+{
+    line-height: 130px;
+
+    width: 180px;
+    height: 130px;
+    margin: 5px auto;
+
+    cursor: pointer;
+    text-align: center;
+}
+#stage > dd > .description
+{
+    font-size: 15px;
+
+    margin: 0 10px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
+#stage > dd > .poster
+{
+    display: none;
+}
+#stage > dd > .noContent
+{
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 30px;
+}
+#stage > .lab-title
+{
+    font-size: 70px;
+    line-height: 100px;
+
+    position: absolute;
+    top: -100px;
+    left: -100px;
+
+    width: 400px;
+    height: 100px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, .9);
+    text-shadow: 0 0 10px rgba(0, 255, 255, .95);
+}
+#dialog
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    display: none;
+    /*box-shadow: 0 0 12px rgba(0, 255, 255, .9);*/
+    /*box-shadow: 0 0 12px rgba(255, 255, 255, .9);*/
+    overflow: hidden;
+
+    width: 1200px;
+    height: 550px;
+    margin-top: -275px;
+    margin-left: -600px;
+    /*border: 1px solid rgba(127, 255, 255, .9);*/
+    /*background-color: rgba(73, 160, 154, .9);*/
+
+    background-color: rgba(0, 198, 213, .7);
+    background-color: rgba(0, 0, 0, .6);
+}
+#dialog > .video-wrapper
+{
+    float: left;
+
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+#video
+{
+    width: 860px;
+    height: 524px;
+    /*background-color: white;*/
+}
+#dialog > .sidebar
+{
+    margin-top: 30px;
+    margin-left: 900px;
+
+    color: white;
+    font-family: 'Microsoft Yahei';
+}
+.sidebar .title
+{
+    font-size: 36px;
+}
+.sidebar .author
+{
+    margin-top: 10px;
+}
+.sidebar .date
+{
+    margin-top: 10px;
+}
+.sidebar .description
+{
+    margin-top: 10px;
+}
+#close{
+    background: none;
+    border: 0;
+    color: white;
+    font-family: 'Microsoft Yahei';
+}
