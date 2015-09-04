@@ -72,7 +72,7 @@ var Effect = function(a, w, h, s, p, x, y) {
 					_o.domStr += "<dd><div class='noContent'>等待你的作品</div></dd>";
 				}
 			});
-			_o.domStr += "<div class='lab-title'>RDC LAB</div>"
+			_o.domStr += "<div class='lab-title'>3D STAGE</div>"
 			Aui(_o.stage).html(_o.domStr);
 			var _oList = Aui("dd", _o.stage),
 				_sLen = _o.obj.length,
@@ -144,53 +144,16 @@ Aui.ready(function() {
 				"date": "2015-07-24",
 				"description": "跨平台远程同步框架",
 				"url": "http://cloud.video.taobao.com/play/u/2295212110/p/1/e/6/t/1/28741519.mp4",
-				"poster": "thumb/webSync.png"
+				"poster": ""
 			}, {
 				"title": "让小二飞",
 				"author": "让飞三人组",
 				"date": "2015-07-24",
 				"description": "这是一款可以让小二飞起来的插件",
 				"url": "http://cloud.video.taobao.com/play/u/2295212110/p/1/e/6/t/1/28740881.mp4",
-				"poster": "thumb/fly2.png"
+				"poster": ""
 			}, {}, {}, {}, {}, {}, {}, {}], 200, 300, Aui.byID("#stage"), 2000, -10, 0
 		);
 		effect.init();
-
-		$('.url').bind('click', function(event) {
-			var $target = $(event.target),
-				title = $target.siblings('.title').text(),
-				author = $target.siblings('.author').text(),
-				date = $target.siblings('.date').text(),
-				url = $target.parent().children('.url').attr('name'),
-				description = $target.siblings('.description').text(),
-				poster = $target.siblings('.poster').text();
-			var $dialog = $('#dialog');
-			var $sidebar = $dialog.children('.sidebar');
-			$sidebar.children('.title').text(title);
-			$sidebar.children('.author').text(author);
-			$sidebar.children('.date').text(date);
-			$sidebar.children('.description').text(description);
-			var $videoWrapper = $dialog.children('.video-wrapper');
-//			var randomString = 'video'+new Date().getTime();
-			$videoWrapper.html('<video id="video" class="video-js vjs-sublime-skin">' + '<source src="' + url + '" type="video/mp4" /></video>');
-            if(window.videoObj){
-                window.videoObj.dispose();
-            }
-			window.videoObj = videojs('video', {
-				controls: true,
-				autoplay: false,
-				preload: 'auto',
-				poster: poster,
-				loop: false,
-				width: 860,
-				height: 484,
-			}, function() {
-				$dialog.fadeIn();
-			});
-		});
-		$('#close').bind('click', function(){
-			$('#dialog').fadeOut();
-            window.videoObj.pause();
-		});
 	}
 });
